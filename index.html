@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaime Forero-Romero: Astrophysics</title>
+<meta name="description" content="Personal academic homepage of Jaime Forero-Romero: research on the cosmic web, large-scale structure, DESI, and machine learning in cosmology.">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function () {
+    var saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") {
+      document.documentElement.setAttribute("data-theme", saved);
+    }
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">Jaime Forero-Romero</a>
+    <div class="header-right">
+      <nav class="site-nav" id="siteNav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">&#9789;</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="top" class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Physics Department · Universidad de los Andes</p>
+      <h1>Jaime Forero-Romero</h1>
+      <p class="hero-role">Associate Professor of Physics</p>
+      <p class="hero-lede">
+        I study the large-scale structure of the Universe: the cosmic web of filaments,
+        walls, and voids that connects every galaxy, using astronomical surveys,
+        cosmological simulations, and machine learning. I've been a member of the
+        Dark Energy Spectroscopic Instrument (DESI) collaboration since 2014 and have
+        led a computational cosmology research group at Universidad de los Andes since 2012.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#publications">View publications</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2>About</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            My work spans three connected goals: understanding how the cosmic web shapes
+            galaxies, using the cosmic web to test cosmology, and building AI/ML methods
+            that serve both. I currently hold an Associate Professor position (with tenure)
+            in the Physics Department at Universidad de los Andes in Bogotá, Colombia, where
+            I've taught and mentored students since 2012.
+          </p>
+          <p>
+            Before returning to Colombia, I was a Gruber Fellow in the Astronomy Department
+            at UC Berkeley (2011-2012) and a postdoctoral fellow at the Leibniz Institute for
+            Astrophysics Potsdam (AIP) in Germany (2007-2011). I received my PhD in Physics
+            from École Normale Supérieure de Lyon (Université de Lyon), France, in 2007, after
+            a Magistère in Physics at École Normale Supérieure, Paris, and undergraduate studies
+            at the Instituto Balseiro (Argentina) and Universidad Nacional de Colombia.
+          </p>
+        </div>
+        <aside class="info-card">
+          <h3>Quick facts</h3>
+          <dl>
+            <dt>Based in</dt><dd>Bogotá, Colombia</dd>
+            <dt>Languages</dt><dd>Spanish (native), English (fluent), French (fluent), German (A2)</dd>
+            <dt>Collaboration</dt><dd>DESI member since 2014; DESI Builder since 2023</dd>
+            <dt>Research group</dt><dd>Leading a computational cosmology group since 2012</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section section-alt">
+    <div class="wrap">
+      <h2>Research</h2>
+      <p class="section-lede">
+        My research is organized around the cosmic web, used in three connected ways:
+        as a tool to understand galaxies, as a tool for cosmology, and as a playground
+        for state-of-the-art AI and machine learning methods that benefit both.
+      </p>
+
+      <div class="research-block">
+        <h3>The cosmic web and large-scale structure</h3>
+        <p>
+          In 2009 I introduced a dynamical classification of the cosmic web that splits
+          space into voids, sheets, filaments, and knots by counting the eigenvalues of the
+          gravitational deformation tensor at each point in a simulation. It has since become
+          a standard reference framework for connecting cosmic web environment to halo and
+          galaxy properties. That approach needs a continuous, gridded density field, easy
+          in a simulation box but hard in a real spectroscopic survey with a mask, a selection
+          function, and gaps. In 2025 my group closed that gap with <strong>ASTRA</strong>
+          (Algorithm for Stochastic Topological RAnking), which classifies galaxies by
+          comparing their observed positions against a random catalog, the same trick
+          redshift-survey clustering codes use to handle survey geometry. ASTRA is on track
+          to become a core tool for cosmic web science over the coming years of survey data.
+        </p>
+      </div>
+
+      <div class="research-block">
+        <h3>The Dark Energy Spectroscopic Instrument</h3>
+        <p>
+          My most substantial ongoing commitment has been to DESI, the Stage-IV
+          spectroscopic survey mapping the Universe out to z≈4 from the Mayall Telescope
+          at Kitt Peak. Since joining in 2014 I've contributed to fiber assignment, target
+          selection, and data quality assurance, work recognized through DESI Builder
+          status. Concretely this has included building and quality-checking several of
+          DESI's main tracer samples, supporting production of the alternate
+          fiber-assignment catalogs needed for robust covariance matrices, and applying
+          unsupervised machine learning (UMAP) to flag instrumental outliers in nightly
+          spectroscopic data. Within the collaboration I've also led focused analyses,
+          including the first detection of the large-scale tidal field through the
+          alignment of galaxy multiplets in DESI data. I now co-chair DESI's Galaxy
+          Environment topical group, producing key papers on how environment shapes
+          galaxy properties.
+        </p>
+      </div>
+
+      <div class="research-block">
+        <h3>Machine learning for cosmology</h3>
+        <p>
+          My group applies deep learning across several problems in cosmology: recovering
+          cosmic web classifications directly from galaxy positions with graph-based
+          features, reconstructing the cosmic velocity field from galaxy positions,
+          estimating cosmological parameters directly from large-scale structure data
+          instead of from compressed summary statistics, and classifying image sequences
+          of astronomical transients with deep neural networks. On the operational side,
+          I use unsupervised learning to automate quality assurance for DESI's nightly
+          spectroscopic data.
+        </p>
+      </div>
+
+      <div class="research-block">
+        <h3>Looking ahead</h3>
+        <p>
+          Going forward, my research keeps working on three fronts at once: understanding
+          how the cosmic web shapes galaxies, developing it further as a clustering method
+          that goes beyond standard two-point statistics, and using AI/ML to make both work
+          at survey scale. This includes continuing to co-lead DESI's Galaxy Environment key
+          papers; contributing to DESI's Alternative Clustering Methods effort, which covers
+          higher-order statistics, void statistics, and other nonlinear measures of the
+          galaxy distribution; an ongoing collaboration connecting cosmic web environment to
+          galaxy gas content; and moving from compressed summary statistics toward full
+          simulation-based inference using AI/ML. I'm also building on a decade of regional
+          leadership in Latin American astronomy, including the Colombian Astronomical
+          Community and the Andean Regional Office of Astronomy for Development, to grow
+          a research group of PhD students and postdocs with a distinctive pipeline of
+          talent from across the region.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="section">
+    <div class="wrap">
+      <h2>Publications</h2>
+
+      <div class="pub-external-links">
+        <a class="btn btn-external" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Forero-Romero%22%20property%3Arefereed&sort=date%20desc" target="_blank" rel="noopener">
+          Refereed publications on ADS
+        </a>
+        <a class="btn btn-external" href="https://arxiv.org/search/?searchtype=author&amp;query=Forero-Romero" target="_blank" rel="noopener">
+          Search arXiv
+        </a>
+        <a class="btn btn-external" href="https://scholar.google.com/citations?user=TLTK6WgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          Google Scholar profile
+        </a>
+      </div>
+
+      <div class="stats-grid pub-stats" aria-label="Bibliometric highlights">
+        <div class="stat-tile">
+          <span class="stat-value">281</span>
+          <span class="stat-label">Refereed publications</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-value">~18,600</span>
+          <span class="stat-label">Citations (ADS)</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-value">52 / 57</span>
+          <span class="stat-label">h-index (ADS / Scholar)</span>
+        </div>
+        <div class="stat-tile">
+          <span class="stat-value">19 + 3 + 1</span>
+          <span class="stat-label">BSc / MSc / PhD theses supervised</span>
+        </div>
+      </div>
+
+      <h3 class="pub-subhead">Selected publications</h3>
+      <p class="section-lede">Five publications that best represent my research, in narrative order: a foundational method, its modern successor, survey infrastructure, a flagship result, and a method applied back to survey data.</p>
+
+      <ol class="pub-list">
+        <li>
+          <p class="pub-citation">
+            <strong>Forero-Romero, J. E.</strong>, Hoffman, Y., Gottlöber, S., Klypin, A., Yepes, G. (2009).
+            <em>A dynamical classification of the cosmic web.</em> MNRAS, 396, 1815-1824.
+            <a href="https://doi.org/10.1111/j.1365-2966.2009.14885.x" target="_blank" rel="noopener">doi:10.1111/j.1365-2966.2009.14885.x</a>
+          </p>
+          <p class="pub-significance">Introduced a dynamical classification of the cosmic web into voids, sheets, filaments, and knots by counting the eigenvalues of the gravitational deformation tensor above a threshold at each point in a simulation. It remains a standard framework for connecting cosmic web environment to halo and galaxy properties.</p>
+        </li>
+        <li>
+          <p class="pub-citation">
+            <strong>Forero-Romero, J. E.</strong>, Palomino, A., Gómez-Cortés, F. L., Li, X. (2025).
+            <em>Cosmic web classification through stochastic topological ranking.</em> RAS Techniques and Instruments, 4, rzaf032.
+            <a href="https://doi.org/10.1093/rasti/rzaf032" target="_blank" rel="noopener">doi:10.1093/rasti/rzaf032</a>
+          </p>
+          <p class="pub-significance">ASTRA classifies galaxies into voids, sheets, filaments, and knots by comparing observed positions against a random catalog, avoiding the density-field interpolation earlier methods required and enabling robust classification even where galaxies sparsely sample a survey.</p>
+        </li>
+        <li>
+          <p class="pub-citation">
+            Abdul Karim, M., et al. (200 authors) (2026).
+            <em>Data Release 1 of the Dark Energy Spectroscopic Instrument.</em> AJ, 171, 285.
+            <a href="https://doi.org/10.3847/1538-3881/ae4c43" target="_blank" rel="noopener">doi:10.3847/1538-3881/ae4c43</a>
+          </p>
+          <p class="pub-significance">DESI's first major public data release: high-confidence redshifts for 18.7 million objects spanning z=0 to z≈4, the largest extragalactic redshift sample ever assembled.</p>
+        </li>
+        <li>
+          <p class="pub-citation">
+            Adame, A. G., et al. (200 authors) (2025).
+            <em>DESI 2024 VI: cosmological constraints from the measurements of baryon acoustic oscillations.</em> JCAP, 2025, 021.
+            <a href="https://doi.org/10.1088/1475-7516/2025/02/021" target="_blank" rel="noopener">doi:10.1088/1475-7516/2025/02/021</a>
+          </p>
+          <p class="pub-significance">DESI's headline BAO cosmology paper, combined with CMB and supernova data to find a preference for time-varying dark energy over the standard cosmological constant, one of the most widely discussed cosmological results of the decade.</p>
+        </li>
+        <li>
+          <p class="pub-citation">
+            Lamman, C., Eisenstein, D., <strong>Forero-Romero, J. E.</strong>, et al. (39 authors) (2024).
+            <em>Detection of the large-scale tidal field with galaxy multiplet alignment in the DESI Y1 spectroscopic survey.</em> MNRAS, 534, 3540-3551.
+            <a href="https://doi.org/10.1093/mnras/stae2290" target="_blank" rel="noopener">doi:10.1093/mnras/stae2290</a>
+          </p>
+          <p class="pub-significance">Detects intrinsic alignment of small galaxy groups with the large-scale tidal field out to 100 h⁻¹ Mpc, establishing multiplet alignment as a promising new probe of cosmological parameters and the galaxy-halo connection.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="teaching" class="section section-alt">
+    <div class="wrap">
+      <h2>Teaching</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            I see knowledge as three interconnected dimensions: being part of a community,
+            sharing a body of validated knowledge within it, and sharing its practices.
+            Since 2012 I have taught across all levels at Universidad de los Andes, almost
+            every semester, building all three dimensions into my courses through group
+            work and field-specific language and problems, since physics and astronomy are
+            best taught close to real data and real problems, not only textbook exercises.
+          </p>
+          <p>
+            I collect structured feedback at mid-semester and again at the end of each
+            course, using simple start/stop/keep principles. My teaching evaluations show
+            a clear improving trend, now averaging 0.5 standard deviations above the
+            university-wide average across all five evaluated dimensions.
+          </p>
+        </div>
+        <aside class="info-card">
+          <h3>Levels &amp; reach</h3>
+          <dl>
+            <dt>Engineering</dt><dd>Basic mechanics and electromagnetism (~2000 students)</dd>
+            <dt>Physics</dt><dd>Computational methods (~500 students)</dd>
+            <dt>Astronomy</dt><dd>Introductory astronomy (~200 students)</dd>
+            <dt>Graduate</dt><dd>Classical physics, machine learning, AI (~100 students)</dd>
+          </dl>
+        </aside>
+      </div>
+      <p>
+        My approach to supervision is to give students a real, well-scoped piece of an
+        active research problem, usually built on DESI data or my cosmic web methods,
+        with regular structured feedback. Since 2012 I have supervised 19 undergraduate
+        theses, 3 Master's theses, 1 completed PhD thesis, and 3 postdoctoral researchers.
+      </p>
+    </div>
+  </section>
+
+  <section id="cv" class="section">
+    <div class="wrap">
+      <h2>Curriculum vitae</h2>
+
+      <h3 class="cv-subhead">Academic appointments</h3>
+      <ul class="timeline">
+        <li><span class="tl-date">2015-present</span> Associate Professor (with tenure), Physics Department, Universidad de los Andes, Bogotá</li>
+        <li><span class="tl-date">2012-2015</span> Assistant Professor, Physics Department, Universidad de los Andes, Bogotá</li>
+        <li><span class="tl-date">2011-2012</span> Gruber Fellow, Astronomy Department, UC Berkeley</li>
+        <li><span class="tl-date">2007-2011</span> Postdoctoral Fellow, Leibniz Institute for Astrophysics Potsdam (AIP), Germany</li>
+      </ul>
+
+      <h3 class="cv-subhead">Education</h3>
+      <ul class="timeline">
+        <li><span class="tl-date">2005-2007</span> PhD in Physics, École Normale Supérieure de Lyon (Université de Lyon), France</li>
+        <li><span class="tl-date">2003-2005</span> Magistère Interuniversitaire de Physique, École Normale Supérieure, Paris (Master, Sciences de l'Univers, Astronomie et Astrophysique; Maîtrise de Physique, Université Pierre et Marie Curie)</li>
+        <li><span class="tl-date">2001-2003</span> Undergraduate studies in Physics, Instituto Balseiro, Bariloche, Argentina</li>
+        <li><span class="tl-date">1999-2001</span> Undergraduate studies in Physics, Universidad Nacional de Colombia, Bogotá</li>
+      </ul>
+
+      <h3 class="cv-subhead">Awards &amp; honors</h3>
+      <ul class="timeline">
+        <li><span class="tl-date">2011-2012</span> Gruber Fellowship, UC Berkeley</li>
+      </ul>
+
+      <h3 class="cv-subhead">Selected leadership &amp; service</h3>
+      <ul class="timeline">
+        <li><span class="tl-date">2024-present</span> Board Member, Colombian Astronomical Community (AstroCO)</li>
+        <li><span class="tl-date">2023-present</span> DESI Builder</li>
+        <li><span class="tl-date">2017-2022</span> Colombian Coordinator, Latin American Chinese European Galaxy Formation Network (LACEGAL), EU Horizon 2020</li>
+        <li><span class="tl-date">2016</span> Co-organizer, XV Latin American IAU Regional Assembly</li>
+        <li><span class="tl-date">2015-2020</span> Founder &amp; Coordinator, Andean Regional Office of Astronomy for Development (IAU)</li>
+        <li><span class="tl-date">2020-present</span> CINFONIA (Centro de Investigación y Formación en Inteligencia Artificial), Universidad de los Andes</li>
+        <li><span class="tl-date">2010-present</span> Referee, The Astrophysical Journal and Monthly Notices of the Royal Astronomical Society</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:je.forero@uniandes.edu.co">
+          <span class="contact-label">Institutional email</span>
+          <span class="contact-value">je.forero@uniandes.edu.co</span>
+        </a>
+        <a class="contact-card" href="https://github.com/forero" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/forero</span>
+        </a>
+        <a class="contact-card" href="https://co.linkedin.com/in/jaime-forero-romero" target="_blank" rel="noopener">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">jaime-forero-romero</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Jaime Forero-Romero. Physics Department, Universidad de los Andes.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
