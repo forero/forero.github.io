@@ -67,7 +67,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 600;
   line-height: 1.25;
 }
@@ -84,7 +84,17 @@ h3 {
   margin: 1.75rem 0 0.75rem;
 }
 
-p { color: var(--text); }
+p {
+  font-family: var(--font-serif);
+  color: var(--text);
+}
+
+.eyebrow,
+.hero-role,
+.pub-citation,
+.site-footer p {
+  font-family: var(--font-sans);
+}
 
 a { color: var(--accent); }
 
@@ -105,7 +115,7 @@ a { color: var(--accent); }
 }
 
 .brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--text);
@@ -275,7 +285,7 @@ a { color: var(--accent); }
 }
 
 .stat-value {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.7rem;
   font-weight: 600;
   color: var(--accent);
@@ -388,7 +398,7 @@ a { color: var(--accent); }
   min-width: 130px;
   color: var(--text);
   font-weight: 500;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
 }
 
 /* Contact */
